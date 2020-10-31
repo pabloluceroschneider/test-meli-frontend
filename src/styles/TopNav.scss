@@ -1,0 +1,43 @@
+
+.topnav-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--ml-yellow);
+    padding: 5px 10%;
+
+    a{
+        padding: 0 5px;
+    }
+
+    form{
+        display: contents;
+        height: 90%;
+        input{
+            width: 100%;
+            text-indent: 10px;
+            border: 1px solid #cfcfcf;
+            border-radius: 5px 0px 0px 5px; 
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            border-top: 1px solid #cfcfcf;
+            border-bottom: 1px solid #cfcfcf;
+            border-right: 1px solid #cfcfcf;
+            border-left: none;
+            border-radius: 0px 5px 5px 0px;
+            cursor: pointer;
+            .nav-icon-search{
+                background-image: url("../assets/ic_Search@2x.png.png");
+                background-size: cover;
+                width: 18px;
+                height: 18px;
+            }
+            &:focus, &:active{
+                outline: none;
+            }
+        }
+    }
+}

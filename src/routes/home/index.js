@@ -1,10 +1,9 @@
 import React from 'react';
+import ContentWrapper from '../../containers/ContentWrapper'
 
 const Home = () => {
     return (
-        <div>
-            Home
-        </div>
+        <ContentWrapper topnav />
     )
 }
 
