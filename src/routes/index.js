@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './home';
+import Items from './items';
 
 const Routes = () => {
 
@@ -12,6 +13,7 @@ const Routes = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/items" component={Items} />
         </Switch>
       </Router>
   );
