@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import HttpRequestRepository from '../../utils/HttpRequestRepository';
 import ContentWrapper from '../../containers/ContentWrapper';
-import HttpRequestRepository from '../../utils/HttpRequestRepository'
+import Product from '../../components/Product';
+
 
 const Items = () => {
     const [ results, setResults] = useState();
@@ -17,10 +19,10 @@ const Items = () => {
 
     return (
         <ContentWrapper topnav breadscrumb>
-            <div className="product-wrapper">
+            <div className="container">
                 {results?.map( item => {
                     return (
-                        <div>{item.id}</div>
+                        <Product key={item.id} item={item}/>
                     )
                 })}
             </div>

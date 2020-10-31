@@ -1,7 +1,18 @@
 
-.product-wrapper{
+.container{
     width: 80%;
     margin-left: 10%;
     min-height: 90%;
     background-color: white;
+    border-radius: 4px;
+}
+
+.product-wrapper{
+    border-bottom: 1px solid var(--ml-light);
+    img{
+        padding: 16px;
+        width:  180px;
+        height: 180px;
+        object-fit: scale-down;
+    }
 }
