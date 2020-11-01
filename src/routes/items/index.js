@@ -11,8 +11,8 @@ const Items = () => {
 
     useEffect(()=>{
         let getData = async () => {
-            let data = await HttpRequestRepository.fetchData("/items", { q: search});
-            setResults(data.results);
+            let { items } = await HttpRequestRepository.fetchData("/items", { q: search});
+            setResults(items);
         }
         getData()
     },[search])

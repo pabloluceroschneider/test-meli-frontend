@@ -1,19 +1,24 @@
 import React from 'react';
-import toCurrency from '../../utils/toCurrency';
 import ic_shipping from '../../assets/ic_shipping@2x.png.png';
+import toCurrency from '../../utils/toCurrency'
 
 const Product = ({item}) => {
+    console.log("item: ", item)
     return (
         <div className="product-wrapper">
 
             <a href={`items/${item.id}`} className="photo">
-                <img src={item.thumbnail} alt=""></img>
+                <img src={item.picture} alt=""></img>
             </a>
 
             <div className="description">
-                <div className="price-shipping">
-                    <div className="price"> {toCurrency(item.price)} </div>
-                    {item.shipping.free_shipping ? 
+                <div className="price">
+                    <div className="currency"> {item.price.currency} </div>
+                    <div className="amount"> {toCurrency(item.price.amount)} </div>
+                    {item.price.decimals ? 
+                        <div className="decimals"> {item.price.decimals} </div>
+                    : null}
+                    {item.free_shipping ? 
                         <img className="shipping" src={ic_shipping} alt={item.id}></img>
                     : null}
                 </div>
@@ -22,7 +27,7 @@ const Product = ({item}) => {
 
             <div className="state_name">
                 <span>
-                    {item.address.state_name}
+                    {item.address}
                 </span>
             </div>
 
