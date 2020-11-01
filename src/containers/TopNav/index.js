@@ -26,7 +26,7 @@ const TopNav = () => {
 					value={search}
 				/>
 				<button tabIndex="3" >
-					<div role="img" aria-label="Buscar" class="nav-icon-search"></div>
+					<div role="img" aria-label="Buscar" className="nav-icon-search"></div>
 				</button>
 			</form>
 		</div>

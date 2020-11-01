@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './home';
 import Items from './items';
+import ItemDetail from './item-detail';
 
 const Routes = () => {
 
@@ -14,6 +15,7 @@ const Routes = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/items" component={Items} />
+          <Route       path="/items/:id" component={ItemDetail} />
         </Switch>
       </Router>
   );
