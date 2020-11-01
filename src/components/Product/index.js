@@ -20,6 +20,12 @@ const Product = ({item}) => {
                 <a className="title" href={`items/${item.id}`}>{item.title}</a>
             </div>
 
+            <div className="state_name">
+                <span>
+                    {item.address.state_name}
+                </span>
+            </div>
+
         </div>
     )
 }
