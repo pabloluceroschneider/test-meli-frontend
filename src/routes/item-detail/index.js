@@ -21,7 +21,7 @@ const ItemDetail = () => {
 
     return (
         <ContentWrapper topnav breadscrumb>
-            <div className="container">
+            <section className="container">
                 {result ? (
                     <div className="product-detail-wrapper">
                         
@@ -60,7 +60,7 @@ const ItemDetail = () => {
                     </div>
 
                 ) : null }
-            </div>
+            </section>
         </ContentWrapper>
     )
 }

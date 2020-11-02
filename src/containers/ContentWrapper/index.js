@@ -4,11 +4,15 @@ import Breadscrumb from '../../components/Breadscrumb'
 
 const ContentWrapper = props => {
     return (
-        <div>
-            { props.topnav ? <TopNav /> : null}
-            { props.breadscrumb ? <Breadscrumb /> : null}
-            { props.children }
-        </div>
+        <>
+            <header>
+                { props.topnav ? <TopNav /> : null}
+            </header>
+            <main>
+                { props.breadscrumb ? <Breadscrumb /> : null}
+                { props.children }
+            </main>
+        </>
     )
 }
 

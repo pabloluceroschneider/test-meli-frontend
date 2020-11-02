@@ -21,11 +21,10 @@ const TopNav = () => {
 					placeholder="Nunca dejes de buscar"
 					maxLength="120"
 					autoFocus
-					tabIndex="2"
 					onChange={handleSearch}
 					value={search}
 				/>
-				<button tabIndex="3" >
+				<button>
 					<div role="img" aria-label="Buscar" className="nav-icon-search"></div>
 				</button>
 			</form>

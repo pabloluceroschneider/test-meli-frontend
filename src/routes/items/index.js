@@ -20,13 +20,13 @@ const Items = () => {
 
     return (
         <ContentWrapper topnav breadscrumb>
-            <div className="container">
+            <section className="container">
                 {results?.map( item => {
                     return (
                         <Product key={item.id} item={item}/>
                     )
                 })}
-            </div>
+            </section>
         </ContentWrapper>
     )
 }
