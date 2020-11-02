@@ -3,4 +3,13 @@
     margin: 16px 0px;
     padding: 0 10%;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    color: var(--ml-letter);
+    .category:not(:first-child){
+        &::before{
+            content: ">";
+            margin: 0px 2px;
+        }
+    }
 }
