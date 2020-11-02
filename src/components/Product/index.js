@@ -8,7 +8,7 @@ const Product = ({item}) => {
 	const { t } = useTranslation()
 
     return (
-        <section className="product-wrapper">
+        <div className="product-wrapper">
 
             <a href={`items/${item.id}`} className="photo">
                 <img src={item.picture} alt={item.title} width="auto"></img>
@@ -34,7 +34,7 @@ const Product = ({item}) => {
                 </span>
             </div>
 
-        </section>
+        </div>
     )
 }
 export default Product;
