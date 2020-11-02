@@ -13,7 +13,6 @@ const Items = () => {
         let getData = async () => {
             let { items, categories } = await HttpRequestRepository.fetchData("/items", { q: search});
             setResults(items);
-            console.log(categories)
             dispatch( ACTIONS.setCategories(categories) )
         }
         getData()
