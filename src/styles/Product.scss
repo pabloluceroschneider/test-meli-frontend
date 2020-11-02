@@ -30,13 +30,21 @@
             flex-direction: row;
             place-items: center;
             font-size: 24px;
-            padding: 0;
+            padding-top: 16px;
             margin-bottom: 32px;
+            .currency{
+                margin-right: 5px;
+            }
+            .decimals{
+                &::before{
+                    content: ",";
+                }
+            }
             img.shipping{
                 width:  20px;
                 height: 20px;
                 object-fit: scale-down;
-                padding: 16px;
+                padding: 0px 16px;
             }
         }
 

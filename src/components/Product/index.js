@@ -1,9 +1,12 @@
 import React from 'react';
 import ic_shipping from '../../assets/ic_shipping@2x.png.png';
-import toCurrency from '../../utils/toCurrency'
+import toCurrency from '../../utils/toCurrency';
+import { useTranslation } from 'react-i18next';
+
 
 const Product = ({item}) => {
-    console.log("item: ", item)
+	const { t } = useTranslation()
+
     return (
         <div className="product-wrapper">
 
@@ -13,7 +16,7 @@ const Product = ({item}) => {
 
             <div className="description">
                 <div className="price">
-                    <div className="currency"> {item.price.currency} </div>
+                    <div className="currency"> {t(item.price.currency)} </div>
                     <div className="amount"> {toCurrency(item.price.amount)} </div>
                     {item.price.decimals ? 
                         <div className="decimals"> {item.price.decimals} </div>
