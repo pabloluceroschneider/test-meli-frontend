@@ -43,9 +43,7 @@ const ItemDetail = () => {
                             <div className="price">
                                 <div className="currency">{t(result.price.currency)}</div>
                                 <div className="amount">{toCurrency(result.price.amount)}</div>
-                                {result.price.decimals ? (
-                                    <sup className="decimals">{result.price.decimals}</sup>
-                                ) : null}
+                                <sup className="decimals">{result.price.decimals ? result.price.decimals : "00"}</sup>
                             </div>
                             <div className="buy">
                                 <button>{t("label.buy")}</button>
